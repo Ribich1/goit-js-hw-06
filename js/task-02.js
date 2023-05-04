@@ -6,15 +6,16 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const arrLi = [];
-ingredients.forEach(function (num) {
-  let li = "";
-  li = document.createElement("li");
-li.textContent = num;
+
+const elements = ingredients.map(function (ingredient) {
+
+  const li = document.createElement("li");
+li.textContent = ingredient;
 li.className = "item";
-  arrLi.push(li)
+  return li;
 });
 console.log(arrLi);
 
 const element = document.querySelector("#ingredients")
-element.append(...arrLi);
+element.append(...elements);
+

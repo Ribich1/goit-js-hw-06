@@ -10,9 +10,9 @@ function onFormSubmit(event) {
     const formObject = {};
     formData.forEach((value, name) => {
         
-        if (value === '') {
-            const alert = console.log("заполни все поля!");
-            return alert;
+        if (value === '' || name ==='') {
+            alert("заполни все поля!");
+            return;
         } else
             formObject[name] = value;
     })
