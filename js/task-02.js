@@ -14,7 +14,6 @@ li.textContent = ingredient;
 li.className = "item";
   return li;
 });
-console.log(arrLi);
 
 const element = document.querySelector("#ingredients")
 element.append(...elements);
